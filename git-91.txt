@@ -10,7 +10,7 @@ git config --global --unset user.email
 
 =======================================
 
-git clone https://github.com/polarapu/batch-91.git
+git clone https://github.com/DileepGoud0307/dev_test/blob/main/git-91.txt
 ls
 cd batch-91
 touch file1
@@ -55,14 +55,14 @@ git push
 
 
 ================================
-git clone https://github.com/polarapu/batch-91.git
-ls
-cd batch-91
-touch prasad
+git clone https://github.com/DileepGoud0307/dev_test/blob/main/git-91.txt
+
+cd batc-91
+touch Dileep_file.txt
 git status
-git add prasad
+git add Dileep
 git status
-git commit -m "sample commit from prasad"
+git commit -m "sample commit from Dileep"
 git status
 git push
 username & passwd
@@ -71,8 +71,8 @@ git push
 git pull --rebase
 git push
 ----------------
-mkdir prasad-dir
-cd prasad-dir
+mkdir -dir
+cd Dileep-dir
 touch f1 f2
 cd ..
 git add .
@@ -82,9 +82,9 @@ git pull --rebase
 git push
 
 --------------------
-rm prasad-dir/f1
+rm Dileep-dir/f1
 or
-cd prasad-dir
+cd Dileep-dir
 rm f1
 cd ..
 git status
@@ -200,9 +200,9 @@ git log
 git log -n
 git log --oneline
 git log --oneline -n
-git log --author=prasad
-git log --author=prasad -n
-git log --author=prasad --oneline git log --author=prasad --oneline -n
+git log --author=Dileep
+git log --author=Dileep -n
+git log --author=Dileep --oneline git log --author=Dileep --oneline -n
 git log --since-yy-mm-dd
 or
 git log --after=yy-mm-dd
