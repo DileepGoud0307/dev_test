@@ -1,0 +1,256 @@
+git init  (to intilize the empty git repo)
+
+git config --global user.name "Dileep Goud"
+git config --global user.email "dileepgoud0307@gmail.com"
+
+git config --list
+
+git config --global --unset user.name
+git config --global --unset user.email
+
+=======================================
+
+git clone https://github.com/polarapu/batch-91.git
+ls
+cd batch-91
+touch file1
+ls
+git status
+git add file1
+git status
+git commit -m "label" file1
+git status
+git log
+git show
+git push
+
+------------------------------
+touch file1 file2 file3 file4
+ls
+git add file1 file2 file3 file4
+or
+git add .
+or
+git add *
+or
+git add -A
+
+git commit -m "label" 
+git push
+
+rm file1  (to delete file1)
+git status
+git add file1
+git commit -m "deleted file"
+git push
+
+mkdir dir1
+ls
+cd dir1
+touch f1 f2
+cd ..
+git add .
+git commit -m "sample dir"
+git push
+
+
+================================
+git clone https://github.com/polarapu/batch-91.git
+ls
+cd batch-91
+touch prasad
+git status
+git add prasad
+git status
+git commit -m "sample commit from prasad"
+git status
+git push
+username & passwd
+error ?
+git push
+git pull --rebase
+git push
+----------------
+mkdir prasad-dir
+cd prasad-dir
+touch f1 f2
+cd ..
+git add .
+git commit -m "sample dir"
+git push
+git pull --rebase
+git push
+
+--------------------
+rm prasad-dir/f1
+or
+cd prasad-dir
+rm f1
+cd ..
+git status
+git add .
+git commit -m "sample file deleted"
+git push
+
+=====================================
+git branch
+git branch release1
+git checkout release1
+git merge branch-name
+
+git branch -d release1  ( to delete branch)
+
+git push origin release1  (to upload into c-repo)
+or
+git push path/of/c-repo release1
+
+git push origin -d release1 (to delete branch on central)
+
+
+================================
+
+Alias
+=====
+git status
+git config --global alias.s "status"
+git s
+
+git config --list
+git config --global alias.cl "config --list"
+git cl
+
+git log
+git config --global alias.l "log"
+git l
+
+git commit -m "Smaple-commit"
+git config --global alias.cmt "commit -m "sample-commit""
+git cmt
+
+git config --global --unset alias.l  (to remove alias)
+
+Conflicts
+=========
+git merge --abort
+
+Tag
+===
+git tag
+git tag T-1.0
+git show T-1.0
+
+git tag -d T-1.0  (it will delete tag)
+
+git tag T-1.0 cid
+git push origin T-1.0  (upload into central)
+
+git push --tags
+
+git checkout T-1.0
+
+git push orogin -d T-1.0  (to delete on central)
+
+============================
+Stash Memory
+============
+git stash list
+git stash save "stash1"
+git stash show stash@{0}
+git stash show -p stash@{0}
+
+POP, APPLY, DROP
+-----------------
+
+POP = Cut
+---
+git stash pop
+git stash pop stash@{x}
+
+APPLY = Copy
+------
+git stash apply
+git stash apply stash@{x}
+
+DROP = Delete
+----
+git stash drop
+git stash drop stash@{x}
+
+reset
+======
+git add file1  (workspace to staging)
+git reset head file1  (staging to workspace)
+
+git commit -m "smaple file" (staging to local)
+git reset --soft cid  (local to staging (n-1))
+
+git reset --mixed cid  (local to workspace)
+
+git reset --hard cid  (to delete commit and commit files)
+
+cherry-pick
+-----------
+git cherry-pick cid (To merge only perticular commit <copy of data> between branches. 
+
+
+========
+Log's
+====
+git log
+git log -n
+git log --oneline
+git log --oneline -n
+git log --author=prasad
+git log --author=prasad -n
+git log --author=prasad --oneline git log --author=prasad --oneline -n
+git log --since-yy-mm-dd
+or
+git log --after=yy-mm-dd
+git log --until=yy-mm-dd
+or
+git log --before=yy-mm-dd
+git log --since=yy-mm-dd --until-yy-mm-dd
+
+git log --after=yy-mm-dd --before=yy-mm-dd
+git log --since="yy-mm-dd 23:00" --until="yy-mm-dd 23:00"
+or
+git log --after="yy-mm-dd 23:00" --before="yy-mm-dd 23:00"
+
+git fork: Users fork code from git-hub repo to there own repo. After forking it will create a copy code into your own repository. 
+
+git conflict: If you have 2 branches. In 2 branches made modifications in same file trying merge than you will get git conflict. to resolve this edit conflict file with required code save and try to merge. 
+
+git Merge: Merge code from main branch to sub-branch or sub-branch to main branch.  
+
+revert
+amend
+diff
+fetch
+merge vs rebase
+origin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
